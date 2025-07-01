@@ -10,69 +10,41 @@
       color: #eee;
       display: flex;
       flex-direction: column;
-      align-items: center;
       gap: 30px;
       padding: 30px 0;
     }
 
     .TC05 {
-      width: 320px;
-      padding: 20px;
-      border-radius: 12px;
+      width: 100%;
       box-sizing: border-box;
       color: #eee;
-      
+      padding: 30px;
     }
 
     .box-header {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
     }
 
     .box-header img {
-      height: 40px;
-      margin-right: 10px;
+      height: 50px;
+      margin-right: 15px;
       filter: drop-shadow(0 0 3px #00ffff);
     }
 
     .box-header .name {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
-      text-shadow: 0 0 6px #0ff, 0 0 12px #0ff;
     }
 
     .box-info {
-      margin-left: 50px;
-      margin-top: 8px;
-      text-align: left;
+      margin-top: 10px;
     }
 
     .box-info p {
-      margin: 2px 0;
-      font-size: 14px;
+      margin: 4px 0;
+      font-size: 16px;
       font-weight: bold;
-      color: #a0f0f0;
-      text-shadow: 0 0 4px #0ff;
-    }
-
-    .box-navbar {
-      margin-top: 15px;
-      margin-bottom: 15px;
-      text-align: center;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-
-    .box-navbar a {
-      text-decoration: none;
-      padding: 10px 18px;
-      display: inline-block;
-      font-size: 14px;
-      cursor: pointer;
-      border-radius: 6px;
-      transition: transform 0.3s ease;
-      user-select: none;
     }
 
     .box-footer {
@@ -80,72 +52,111 @@
       font-size: 14px;
       color: #888;
       font-style: italic;
+      margin-top: 20px;
     }
 
-    /* BOX 1: Neon  */
+    /* BOX 1: NEON */
     .box1 {
       background: #001f33;
       border: 2px solid #00ffff;
       box-shadow: 0 0 15px #00ffff;
       animation: neonPulse 2.5s infinite alternate;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     @keyframes neonPulse {
-      0% {
-        box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-        border-color: #00ffff;
-      }
-      100% {
-        box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
-        border-color: #00aabb;
-      }
+      0% { box-shadow: 0 0 10px #00ffff; border-color: #00ffff; }
+      100% { box-shadow: 0 0 30px #00ffff; border-color: #00aabb; }
+    }
+
+    .box-navbar.box1 {
+      display: flex;
+      gap: 15px;
+      align-items: center;
     }
 
     .box-navbar.box1 a {
       color: #00ffff;
-    }
-    .box-navbar.box1 a:hover {
-      background-color: #00ffff;
-      color: #001f33;
-      transform: scale(1.1);
-    }
-
-    /*  BOX 2: Retro pxl */
-    .box2 {
-      background: linear-gradient(45deg, #ff0055, #ffcc00);
-      color: #222;
-      font-family: 'Courier New', monospace;
-      border: 3px dotted #222;
-      animation: flicker 3s infinite;
-      box-shadow: 0 0 5px #ff0055;
-    }
-
-    @keyframes flicker {
-      0%, 100% {opacity: 1;}
-      50% {opacity: 0.8;}
-      80% {opacity: 0.9;}
-      30% {opacity: 0.7;}
-    }
-
-    .box-navbar.box2 a {
-      color: #222;
-      border: 1px solid #222;
-      margin: 0 4px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .box-navbar.box2 a:hover {
-      background-color: #222;
-      color: #ffcc00;
+      text-decoration: none;
       font-weight: bold;
     }
 
-    /* BOX 3: scanner */
+    .box-navbar.box1 a:hover {
+      background: #00ffff;
+      color: #001f33;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    .box-navbar.box1 input {
+      padding: 6px;
+      border-radius: 4px;
+      background: #002b40;
+      color: #00ffff;
+      border: none;
+      margin-left: auto;
+    }
+
+    /* BOX 2: SUNRISE  */
+    .box2 {
+  background: linear-gradient(45deg, #ff0055, #ffcc00);
+  color: #222;
+  font-family: 'Courier New', monospace;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+}
+
+.box-navbar.box2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box-navbar.box2 a {
+  color: #222;
+  margin-right: 10px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.box-navbar.box2 a:hover {
+  background: #222;
+  color: #ffcc00;
+}
+
+.box-navbar.box2 select {
+  padding: 6px 8px;
+  font-family: 'Courier New';
+  background: #ffcc00;
+  color: #222;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+    /* BOX 3: NEON GRID */
     .box3 {
       background: #0a0a0a;
-      box-shadow: 0 0 8px #0ff;
       border: 2px solid #0ff;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .box3::before {
@@ -165,89 +176,85 @@
       100% { top: 150%; }
     }
 
+    .box-navbar.box3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
     .box-navbar.box3 a {
       color: #0ff;
-      text-shadow: 0 0 5px #0ff;
-      margin: 0 6px;
-      transition: transform 0.3s ease;
+      margin-right: 15px;
+      text-decoration: none;
     }
+
     .box-navbar.box3 a:hover {
       color: #fff;
-      text-shadow: 0 0 12px #0ff;
-      transform: scale(1.2);
+      text-shadow: 0 0 8px #0ff;
     }
 
-    /*  BOX 4: cotton candy */
+    .box-navbar.box3 .status {
+      background: #0ff;
+      color: #000;
+      padding: 4px 10px;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    /* BOX 4: COTTON CANDY */
     .box4 {
       background: linear-gradient(135deg, #ff77ff, #77ffff);
-      border-left: 6px solid #ff55ff;
+      border-left: 10px solid #ff55ff;
       color: #222;
-      font-weight: 600;
-      position: relative;
-      overflow: hidden;
-      font-family: 'Arial Black', Gadget, sans-serif;
+      font-family: 'Arial Black', sans-serif;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
-    
     .box-header .name {
-      position: relative;
       animation: glitch 2s infinite;
     }
 
     @keyframes glitch {
-      0% {
-        text-shadow:
-          2px 0 #ff00ff,
-          -2px 0 #00ffff;
-      }
-      20% {
-        text-shadow:
-          -2px 0 #ff00ff,
-          2px 0 #00ffff;
-      }
-      40% {
-        text-shadow:
-          2px 2px #ff00ff,
-          -2px -2px #00ffff;
-      }
-      60% {
-        text-shadow:
-          -2px -2px #ff00ff,
-          2px 2px #00ffff;
-      }
-      80% {
-        text-shadow:
-          2px 0 #ff00ff,
-          -2px 0 #00ffff;
-      }
-      100% {
-        text-shadow:
-          -2px 0 #ff00ff,
-          2px 0 #00ffff;
-      }
+      0%, 100% { text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
+      50% { text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff; }
+    }
+
+    .box-navbar.box4 {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .box-navbar.box4 a {
       color: #222;
       margin: 0 5px;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.3s ease;
-    }
-    .box-navbar.box4 a:hover {
-      border-color: #ff00ff;
       font-weight: bold;
-      text-shadow: 0 0 8px #ff00ff;
+      text-decoration: none;
     }
 
-    /*BOX 5: Matrix */
+    .box-navbar.box4 a:hover {
+      text-shadow: 0 0 5px #ff00ff;
+    }
+
+    .box-navbar.box4 input {
+      border: none;
+      padding: 6px;
+      border-radius: 8px;
+      background: #fff;
+      font-weight: bold;
+    }
+
+    /* BOX 5: MATRIX */
     .box5 {
       background: #001400;
-      border-left: 6px solid #00ff00;
+      border-left: 10px solid #00ff00;
       font-family: 'Courier New', monospace;
       color: #00ff00;
       position: relative;
       overflow: hidden;
-      padding-bottom: 40px;
     }
 
     .digital-rain {
@@ -260,12 +267,9 @@
       z-index: 0;
       font-size: 14px;
       font-weight: bold;
-      letter-spacing: 1px;
       color: #00ff00;
-      text-shadow: 0 0 8px #00ff00;
       animation: rainFall 8s linear infinite;
       white-space: nowrap;
-      overflow: hidden;
     }
 
     @keyframes rainFall {
@@ -278,19 +282,35 @@
       z-index: 1;
     }
 
+    .box-navbar.box5 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .box-navbar.box5 a {
       color: #00ff00;
-      margin: 0 6px;
+      margin-right: 10px;
+      text-decoration: none;
       border: 1px solid #00ff00;
-      padding: 8px 12px;
+      padding: 6px 10px;
+      background: rgba(0, 255, 0, 0.1);
       border-radius: 4px;
-      background-color: rgba(0, 255, 0, 0.1);
-      transition: background-color 0.3s ease, color 0.3s ease;
     }
+
     .box-navbar.box5 a:hover {
-      background-color: #00ff00;
+      background: #00ff00;
       color: #001400;
       font-weight: bold;
+    }
+
+    .box-navbar.box5 .menu-btn {
+      font-size: 14px;
+      padding: 6px 12px;
+      background: transparent;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      cursor: pointer;
     }
 
   </style>
@@ -311,6 +331,7 @@
       <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
+      <input type="text" placeholder="Search...">
     </div>
     <div class="box-footer">All Rights Reserved 2025</div>
   </div>
@@ -326,9 +347,16 @@
       <p>WD-SEATWORK1</p>
     </div>
     <div class="box-navbar box2">
-      <a href="#">Home</a>
-      <a href="#">Projects</a>
-      <a href="#">Services</a>
+      <div>
+        <a href="#">Projects</a>
+        <a href="#">Services</a>
+        <a href="#">News</a>
+      </div>
+      <select>
+        <option>More</option>
+        <option>Settings</option>
+        <option>Help Me</option>
+      </select>
     </div>
     <div class="box-footer">All Rights Reserved 2025</div>
   </div>
@@ -344,9 +372,12 @@
       <p>WD-SEATWORK1</p>
     </div>
     <div class="box-navbar box3">
-      <a href="#">Dashboard</a>
-      <a href="#">Reports</a>
-      <a href="#">Help</a>
+      <div>
+        <a href="#">Dashboard</a>
+        <a href="#">Reports</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="status">Status: Online</div>
     </div>
     <div class="box-footer">All Rights Reserved 2025</div>
   </div>
@@ -362,18 +393,19 @@
       <p>WD-SEATWORK1</p>
     </div>
     <div class="box-navbar box4">
-      <a href="#">Portfolio</a>
-      <a href="#">Resume</a>
-      <a href="#">Contact</a>
+      <div>
+        <a href="#">Portfolio</a>
+        <a href="#">Resume</a>
+        <a href="#">Contact</a>
+      </div>
+      <input type="search" placeholder="🔍 Search">
     </div>
     <div class="box-footer">All Rights Reserved 2025</div>
   </div>
 
   <!-- BOX 5 -->
   <div class="TC05 box5">
-    <div class="digital-rain">
-      IT0043 IT0043 IT0043 IT0043  
-    </div>
+    <div class="digital-rain">IT0043 IT0043 IT0043 IT0043 IT0043 IT0043</div>
     <div class="box-header">
       <img src="assets/img/logo.png" alt="Logo">
       <div class="name">Anthony Gabrielle Hermoso</div>
@@ -383,9 +415,12 @@
       <p>WD-SEATWORK1</p>
     </div>
     <div class="box-navbar box5">
-      <a href="#">Blog</a>
-      <a href="#">Gallery</a>
-      <a href="#">FAQ</a>
+      <div>
+        <a href="#">Blog</a>
+        <a href="#">Gallery</a>
+        <a href="#">FAQ</a>
+      </div>
+      <button class="menu-btn">☰ MENU</button>
     </div>
     <div class="box-footer">All Rights Reserved 2025</div>
   </div>
