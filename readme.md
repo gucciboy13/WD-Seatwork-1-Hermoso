@@ -1,71 +1,112 @@
-WD-SEATWORK1
+## Table of Contents
 
-This project is a simple, well-structured HTML and CSS layout consisting of five uniquely styled section boxes. Each box represents a styled card or section containing a header, navigation menu, and footer. It was created as part of the **WD-SEATWORK1** activity for the **TC05** course.
-
-## 🧩 Features
-
-- ✅ Modular design with reusable structure
-- 🎨 Distinct visual styling for each box using CSS
-- 📱 Responsive layout basics with Flexbox
-- 🧭 Simple navigation bar included in each section
-- 🖼 Placeholder image and personal information display
+- [Overview](#overview)  
+- [Key Components](#key-components)  
+- [Technology](#technology)  
+- [Rules, Practices and Principles](#rules-practices-and-principles)  
+- [Resources](#resources)  
 
 ---
 
-## 📁 File Structure
-project-root/
-├── assets/
-│ └── img/
-│ └── logo.png # Logo image used in the header
-├── index.html # Main HTML file with all 5 section boxes
-└── README.md # This readme file
+## Overview
+
+This project showcases five distinct section styles (boxes) implemented within a single HTML page, each demonstrating different design themes and interactive elements. It is a web layout exercise named **TC05 Sections**, created as a seatwork assignment to practice CSS styling techniques and basic HTML structure.
+
+### Guiding Questions:
+
+- **What is the project?**  
+  A single HTML page with multiple visually unique section styles that display header, navigation, info, and footer elements.
+
+- **What is the purpose?**  
+  To demonstrate mastery of CSS styling (including animations, gradients, flexbox, grid layouts, and hover effects) alongside semantic HTML structure, and to present information in an organized and visually appealing way.
+
+- **What are the key components?**  
+  Five styled boxes (sections) each with:  
+  - Header (with logo and name)  
+  - Information area  
+  - Navigation bar with links and inputs/selects/buttons  
+  - Footer with copyright notice
+
+- **What technology is used and how?**  
+  Pure **HTML** and **CSS** (no JavaScript). CSS features include animations, flexbox, grid layout, gradients, and hover effects to create dynamic and modern UI components.
 
 ---
 
-## 📌 Sections Overview
+## Key Components
 
-Each section (`box1` to `box5`) follows a consistent structure:
+- Single-page website with five styled sections (boxes), each with unique design and layout:  
+  - **Box 1: Neon theme** with pulsing border animation  
+  - **Box 2: Sunrise theme** using gradients and grid layout  
+  - **Box 3: Neon grid theme** with animated scanline effect  
+  - **Box 4: Cotton candy theme** with glitch text animation  
+  - **Box 5: Matrix theme** featuring digital rain effect animation  
 
-- **Header** – Displays a logo and name (Anthony Gabrielle Hermoso)
-- **Info** – Shows course and activity identifiers (TC05, WD-SEATWORK1)
-- **Navbar** – Simple navigation links with hover effects
-- **Footer** – "All Rights Reserved 2025" text
-
-Each box is styled differently using CSS classes:
-- `box1` – Basic with border
-- `box2` – Gradient background
-- `box3` – Light yellow with drop shadow
-- `box4` – Info-style background with accent border
-- `box5` – Alert-style with monospace font
-
----
-
-## 🛠 How to Use
-
-1. **Clone or Download** the project files.
-2. Place your logo in `assets/img/logo.png`. Make sure the path matches.
-3. Open `index.html` in your browser.
-4. Customize the content or styles as needed.
+- Common structural elements for each box:  
+  - Logo and name header  
+  - Information paragraphs  
+  - Navbar with links and inputs/buttons/selects  
+  - Footer with rights reserved message
 
 ---
 
-## ✨ Customization Tips
+## Technology
 
-- To change colors or layout, modify the styles in the `<style>` tag inside `index.html`.
-- Replace the navigation link labels or URLs as per your site's needs.
-- Update personal or course information in the `.box-info` sections.
-
----
-
-## 🧑‍💻 Author
-
-**Anthony Gabrielle Hermoso**  
-WD-SEATWORK1 — TC05 (Web Development)
+- **HTML5**: Semantic structure and content  
+- **CSS3**: Styling, layout, animations, transitions  
+  - Flexbox and CSS Grid for layout  
+  - Keyframe animations for effects (neon pulse, scanline, glitch, digital rain)  
+  - Gradients and box shadows for visual style
 
 ---
 
-## 📅 License
+## Rules, Practices and Principles
 
-All Rights Reserved © 2025
+- Project titles should use the prefix `WD-` followed by a descriptive name for the subject.  
+- Filename for the main HTML page must always be `index.html`.  
+- Files must be organized into respective folders (assets, css, img, js).  
+- Naming conventions follow camelCase format (e.g., `buttonAnimatedStyle.css`).  
+- Use **only external CSS** files for styling.  
+- Folder names should be descriptive and related to their content or function.  
 
-> *This project is for academic or personal portfolio use only.*
+Example file structure:
+
+WD-TC05Sections
+├─ assets
+│ ├─ css
+│ │ └─ style.css
+│ ├─ img
+│ │ └─ logo.png
+│ └─ js
+│ └─ script.js
+├─ pages
+│ └─ pageName
+│ ├─ assets
+│ │ ├─ css
+│ │ │ └─ style.css
+│ │ ├─ img
+│ │ │ └─ image.png
+│ │ └─ js
+│ │ └─ script.js
+│ └─ index.html
+├─ index.html
+└─ readme.md
+
+
+---
+
+## Resources
+
+| Title                 | Purpose                                                  | Link                                |
+|-----------------------|----------------------------------------------------------|------------------------------------|
+| MDN Web Docs          | Reference for HTML, CSS properties, and animations       | https://developer.mozilla.org      |
+| CSS-Tricks            | Guides and tutorials on CSS layouts and animations       | https://css-tricks.com             |
+| W3Schools             | Beginner-friendly tutorials on HTML and CSS              | https://w3schools.com              |
+| Google Fonts          | Fonts used in the project                                 | https://fonts.google.com           |
+| Animate.css           | CSS animation library inspiration                         | https://animate.style              |
+
+---
+
+*All Rights Reserved 2025*  
+*Created by Anthony Gabrielle Hermoso*
+
+
