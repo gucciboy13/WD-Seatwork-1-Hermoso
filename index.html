@@ -5,13 +5,23 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f0f1a;
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 30px 0;
     }
 
     .TC05 {
+      width: 320px;
       padding: 20px;
-      margin: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
+      box-sizing: border-box;
+      color: #eee;
+      
     }
 
     .box-header {
@@ -23,16 +33,18 @@
     .box-header img {
       height: 40px;
       margin-right: 10px;
+      filter: drop-shadow(0 0 3px #00ffff);
     }
 
     .box-header .name {
       font-size: 20px;
       font-weight: bold;
+      text-shadow: 0 0 6px #0ff, 0 0 12px #0ff;
     }
 
     .box-info {
       margin-left: 50px;
-      margin-top: 5px;
+      margin-top: 8px;
       text-align: left;
     }
 
@@ -40,42 +52,247 @@
       margin: 2px 0;
       font-size: 14px;
       font-weight: bold;
-      color: #333;
+      color: #a0f0f0;
+      text-shadow: 0 0 4px #0ff;
     }
 
     .box-navbar {
-      background-color: #333;
-      overflow: hidden;
       margin-top: 15px;
       margin-bottom: 15px;
-      border-radius: 5px;
       text-align: center;
+      border-radius: 8px;
+      font-weight: 600;
     }
 
     .box-navbar a {
-      color: white;
       text-decoration: none;
-      padding: 10px 16px;
+      padding: 10px 18px;
       display: inline-block;
-    }
-
-    .box-navbar a:hover {
-      background-color: #575757;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+      user-select: none;
     }
 
     .box-footer {
       text-align: center;
       font-size: 14px;
-      color: #333;
-      margin-top: 15px;
+      color: #888;
+      font-style: italic;
+    }
+
+    /* BOX 1: Neon  */
+    .box1 {
+      background: #001f33;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 15px #00ffff;
+      animation: neonPulse 2.5s infinite alternate;
+    }
+
+    @keyframes neonPulse {
+      0% {
+        box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+        border-color: #00ffff;
+      }
+      100% {
+        box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
+        border-color: #00aabb;
+      }
+    }
+
+    .box-navbar.box1 a {
+      color: #00ffff;
+    }
+    .box-navbar.box1 a:hover {
+      background-color: #00ffff;
+      color: #001f33;
+      transform: scale(1.1);
+    }
+
+    /*  BOX 2: Retro pxl */
+    .box2 {
+      background: linear-gradient(45deg, #ff0055, #ffcc00);
+      color: #222;
+      font-family: 'Courier New', monospace;
+      border: 3px dotted #222;
+      animation: flicker 3s infinite;
+      box-shadow: 0 0 5px #ff0055;
+    }
+
+    @keyframes flicker {
+      0%, 100% {opacity: 1;}
+      50% {opacity: 0.8;}
+      80% {opacity: 0.9;}
+      30% {opacity: 0.7;}
+    }
+
+    .box-navbar.box2 a {
+      color: #222;
+      border: 1px solid #222;
+      margin: 0 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .box-navbar.box2 a:hover {
+      background-color: #222;
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    /* BOX 3: scanner */
+    .box3 {
+      background: #0a0a0a;
+      box-shadow: 0 0 8px #0ff;
+      border: 2px solid #0ff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .box3::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      background: linear-gradient(0deg, transparent 0%, rgba(0,255,255,0.2) 50%, transparent 100%);
+      animation: scanline 4s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes scanline {
+      0% { top: -50%; }
+      100% { top: 150%; }
+    }
+
+    .box-navbar.box3 a {
+      color: #0ff;
+      text-shadow: 0 0 5px #0ff;
+      margin: 0 6px;
+      transition: transform 0.3s ease;
+    }
+    .box-navbar.box3 a:hover {
+      color: #fff;
+      text-shadow: 0 0 12px #0ff;
+      transform: scale(1.2);
+    }
+
+    /*  BOX 4: cotton candy */
+    .box4 {
+      background: linear-gradient(135deg, #ff77ff, #77ffff);
+      border-left: 6px solid #ff55ff;
+      color: #222;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Arial Black', Gadget, sans-serif;
     }
 
     
-    .box1 { background-color: #f9f9f9; border: 2px solid #ccc; }
-    .box2 { background: linear-gradient(to right, #a1c4fd, #c2e9fb); color: #333; }
-    .box3 { background-color: #fff3cd; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    .box4 { background-color: #d1ecf1; border-left: 5px solid #17a2b8; }
-    .box5 { background-color: #f8d7da; border-left: 5px solid #dc3545; font-family: 'Courier New', monospace; }
+    .box-header .name {
+      position: relative;
+      animation: glitch 2s infinite;
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow:
+          2px 0 #ff00ff,
+          -2px 0 #00ffff;
+      }
+      20% {
+        text-shadow:
+          -2px 0 #ff00ff,
+          2px 0 #00ffff;
+      }
+      40% {
+        text-shadow:
+          2px 2px #ff00ff,
+          -2px -2px #00ffff;
+      }
+      60% {
+        text-shadow:
+          -2px -2px #ff00ff,
+          2px 2px #00ffff;
+      }
+      80% {
+        text-shadow:
+          2px 0 #ff00ff,
+          -2px 0 #00ffff;
+      }
+      100% {
+        text-shadow:
+          -2px 0 #ff00ff,
+          2px 0 #00ffff;
+      }
+    }
+
+    .box-navbar.box4 a {
+      color: #222;
+      margin: 0 5px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .box-navbar.box4 a:hover {
+      border-color: #ff00ff;
+      font-weight: bold;
+      text-shadow: 0 0 8px #ff00ff;
+    }
+
+    /*BOX 5: Matrix */
+    .box5 {
+      background: #001400;
+      border-left: 6px solid #00ff00;
+      font-family: 'Courier New', monospace;
+      color: #00ff00;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 40px;
+    }
+
+    .digital-rain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #00ff00;
+      text-shadow: 0 0 8px #00ff00;
+      animation: rainFall 8s linear infinite;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    @keyframes rainFall {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+
+    .box5 > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .box-navbar.box5 a {
+      color: #00ff00;
+      margin: 0 6px;
+      border: 1px solid #00ff00;
+      padding: 8px 12px;
+      border-radius: 4px;
+      background-color: rgba(0, 255, 0, 0.1);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .box-navbar.box5 a:hover {
+      background-color: #00ff00;
+      color: #001400;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 <body>
@@ -90,7 +307,7 @@
       <p>TC05</p>
       <p>WD-SEATWORK1</p>
     </div>
-    <div class="box-navbar">
+    <div class="box-navbar box1">
       <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
@@ -108,7 +325,7 @@
       <p>TC05</p>
       <p>WD-SEATWORK1</p>
     </div>
-    <div class="box-navbar">
+    <div class="box-navbar box2">
       <a href="#">Home</a>
       <a href="#">Projects</a>
       <a href="#">Services</a>
@@ -126,7 +343,7 @@
       <p>TC05</p>
       <p>WD-SEATWORK1</p>
     </div>
-    <div class="box-navbar">
+    <div class="box-navbar box3">
       <a href="#">Dashboard</a>
       <a href="#">Reports</a>
       <a href="#">Help</a>
@@ -144,7 +361,7 @@
       <p>TC05</p>
       <p>WD-SEATWORK1</p>
     </div>
-    <div class="box-navbar">
+    <div class="box-navbar box4">
       <a href="#">Portfolio</a>
       <a href="#">Resume</a>
       <a href="#">Contact</a>
@@ -154,6 +371,9 @@
 
   <!-- BOX 5 -->
   <div class="TC05 box5">
+    <div class="digital-rain">
+      IT0043 IT0043 IT0043 IT0043  
+    </div>
     <div class="box-header">
       <img src="assets/img/logo.png" alt="Logo">
       <div class="name">Anthony Gabrielle Hermoso</div>
@@ -162,7 +382,7 @@
       <p>TC05</p>
       <p>WD-SEATWORK1</p>
     </div>
-    <div class="box-navbar">
+    <div class="box-navbar box5">
       <a href="#">Blog</a>
       <a href="#">Gallery</a>
       <a href="#">FAQ</a>
