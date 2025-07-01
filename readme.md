@@ -68,10 +68,8 @@ This project showcases five distinct section styles (boxes) implemented within a
 - Use **only external CSS** files for styling.  
 - Folder names should be descriptive and related to their content or function.  
 
-Example file structure:
+### Example file structure:
 
-
-```plaintext
 WD-TC05Sections
 ├─ assets
 │ ├─ css
@@ -79,19 +77,20 @@ WD-TC05Sections
 │ ├─ img
 │ │ └─ logo.png
 │ └─ js
-│   └─ script.js
+│ └─ script.js
 ├─ pages
 │ └─ pageName
-│   ├─ assets
-│   │ ├─ css
-│   │ │ └─ style.css
-│   │ ├─ img
-│   │ │ └─ image.png
-│   │ └─ js
-│   │   └─ script.js
-│   └─ index.html
+│ ├─ assets
+│ │ ├─ css
+│ │ │ └─ style.css
+│ │ ├─ img
+│ │ │ └─ image.png
+│ │ └─ js
+│ │ └─ script.js
+│ └─ index.html
 ├─ index.html
 └─ readme.md
+
 
 ---
 
