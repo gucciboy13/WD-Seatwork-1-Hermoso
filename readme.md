@@ -70,6 +70,7 @@ This project showcases five distinct section styles (boxes) implemented within a
 
 ### Example file structure:
 
+```plaintext
 WD-TC05Sections
 ├─ assets
 │ ├─ css
@@ -108,5 +109,3 @@ WD-TC05Sections
 
 *All Rights Reserved 2025*  
 *Created by Anthony Gabrielle Hermoso*
-
-
