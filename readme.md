@@ -1,4 +1,4 @@
-# TC05 Sections – WD-SEATWORK1
+WD-SEATWORK1
 
 This project is a simple, well-structured HTML and CSS layout consisting of five uniquely styled section boxes. Each box represents a styled card or section containing a header, navigation menu, and footer. It was created as part of the **WD-SEATWORK1** activity for the **TC05** course.
 
