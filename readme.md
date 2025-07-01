@@ -71,7 +71,27 @@ This project showcases five distinct section styles (boxes) implemented within a
 Example file structure:
 
 
-<pre> ```plaintext WD-TC05Sections ├─ assets │ ├─ css │ │ └─ style.css │ ├─ img │ │ └─ logo.png │ └─ js │ └─ script.js ├─ pages │ └─ pageName │ ├─ assets │ │ ├─ css │ │ │ └─ style.css │ │ ├─ img │ │ │ └─ image.png │ │ └─ js │ │ └─ script.js │ └─ index.html ├─ index.html └─ readme.md ``` </pre>
+```plaintext
+WD-TC05Sections
+├─ assets
+│ ├─ css
+│ │ └─ style.css
+│ ├─ img
+│ │ └─ logo.png
+│ └─ js
+│   └─ script.js
+├─ pages
+│ └─ pageName
+│   ├─ assets
+│   │ ├─ css
+│   │ │ └─ style.css
+│   │ ├─ img
+│   │ │ └─ image.png
+│   │ └─ js
+│   │   └─ script.js
+│   └─ index.html
+├─ index.html
+└─ readme.md
 
 ---
 
