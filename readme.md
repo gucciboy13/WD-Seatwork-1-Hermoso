@@ -1,71 +1,102 @@
+## WD-SEATWORK1  
+
+A collection of five uniquely styled section boxes, showcasing advanced CSS layout and animation techniques.  
+
+![wakatime](https://wakatime.com/badge/user/example/project.svg)
+
+---
+
+## Table of Contents  
+- [Overview](#overview)  
+- [Key Components](#key-components)  
+- [Technology](#technology)  
+- [Rules, Practices and Principles](#rules-practices-and-principles)  
+- [Resources](#resources)  
+
+---
+
+## Overview  
+
+This project is a **Single Page Website** that displays multiple unique UI box designs. Each section (`box1` to `box5`) demonstrates different creative styles using pure HTML and CSS—ranging from neon effects to digital rain, gradients, and glitch animations.
+
+### Guiding Question:
+
+- **What is the project?**  
+  A single HTML file showcasing 5 visually distinct website UI sections styled entirely with CSS.
+
+- **What’s the purpose?**  
+  To explore and practice advanced CSS design techniques, animation, and layout principles in a structured web development format.
+
+- **What are the key components?**  
+  Each section (`box1` to `box5`) acts as a mini template, styled uniquely and independently to simulate different website themes or modules.
+
+- **What technology is used and how is it used?**  
+  This project uses:
+  - **HTML** to structure the content and layout of the boxes.
+  - **CSS** to apply styles, gradients, animations, and interactivity.
+
+---
+
+## Key Components  
+
+- **Single Page Website**  
+- **Thematic Box Designs** (Neon, Sunrise, Grid Scanline, Cotton Candy, Matrix)  
+- **CSS Animations** (Neon glow, Scanline, Glitch, Digital Rain)  
+- **Functional-Looking Navigation and Footer per Section**
+
+---
+
+## Technology  
+
+- **HTML** – Structuring the layout and sections.  
+- **CSS** – Styling, animations, responsive design, hover effects.  
+- **JavaScript** – *(Not used in this specific version, but structure supports future JS features.)*
+
+---
+
+## Rules, Practices and Principles  
+
+- ✅ Always use **WD-** prefix in the project title (e.g., `WD-SEATWORK1`)  
+- ✅ Do not rename `index.html`  
+- ✅ Store files in their respective folders: `assets/css`, `assets/js`, etc.  
+- ✅ Use **camelCase** for all file names  
+  - Example: `buttonAnimatedStyle.css`  
+- ✅ Only external CSS is used  
+- ✅ Rename folders inside `pages/` clearly to match their purpose  
+- ✅ File Structure:
+
 WD-SEATWORK1
+├── assets
+│ ├── css
+│ │ └── style.css
+│ ├── img
+│ │ └── logo.png
+│ └── js
+│ └── script.js
+├── pages
+│ └── examplePage
+│ ├── assets
+│ │ ├── css
+│ │ │ └── style.css
+│ │ ├── img
+│ │ │ └── exampleImage.webp
+│ │ └── js
+│ │ └── script.js
+│ └── index.html
+├── index.html
+└── readme.md
 
-This project is a simple, well-structured HTML and CSS layout consisting of five uniquely styled section boxes. Each box represents a styled card or section containing a header, navigation menu, and footer. It was created as part of the **WD-SEATWORK1** activity for the **TC05** course.
-
-## 🧩 Features
-
-- ✅ Modular design with reusable structure
-- 🎨 Distinct visual styling for each box using CSS
-- 📱 Responsive layout basics with Flexbox
-- 🧭 Simple navigation bar included in each section
-- 🖼 Placeholder image and personal information display
-
----
-
-## 📁 File Structure
-project-root/
-├── assets/
-│ └── img/
-│ └── logo.png # Logo image used in the header
-├── index.html # Main HTML file with all 5 section boxes
-└── README.md # This readme file
-
----
-
-## 📌 Sections Overview
-
-Each section (`box1` to `box5`) follows a consistent structure:
-
-- **Header** – Displays a logo and name (Anthony Gabrielle Hermoso)
-- **Info** – Shows course and activity identifiers (TC05, WD-SEATWORK1)
-- **Navbar** – Simple navigation links with hover effects
-- **Footer** – "All Rights Reserved 2025" text
-
-Each box is styled differently using CSS classes:
-- `box1` – Basic with border
-- `box2` – Gradient background
-- `box3` – Light yellow with drop shadow
-- `box4` – Info-style background with accent border
-- `box5` – Alert-style with monospace font
 
 ---
 
-## 🛠 How to Use
+## Resources  
 
-1. **Clone or Download** the project files.
-2. Place your logo in `assets/img/logo.png`. Make sure the path matches.
-3. Open `index.html` in your browser.
-4. Customize the content or styles as needed.
-
----
-
-## ✨ Customization Tips
-
-- To change colors or layout, modify the styles in the `<style>` tag inside `index.html`.
-- Replace the navigation link labels or URLs as per your site's needs.
-- Update personal or course information in the `.box-info` sections.
+| Title            | Purpose                                                  | Link               |
+|------------------|----------------------------------------------------------|--------------------|
+| CSS Gradient Tool| For building and testing gradient backgrounds            | [cssgradient.io](https://cssgradient.io) |
+| Font Awesome     | Adding icons to navbars and UI components                | [fontawesome.com](https://fontawesome.com) |
+| Glitch Effect CSS| Inspiration for glitch animation used in Box 4           | [codrops.com](https://tympanus.net/codrops/) |
+| Digital Rain Demo| Matrix-style animation example for Box 5                 | [codepen.io](https://codepen.io/) |
 
 ---
 
-## 🧑‍💻 Author
-
-**Anthony Gabrielle Hermoso**  
-WD-SEATWORK1 — TC05 (Web Development)
-
----
-
-## 📅 License
-
-All Rights Reserved © 2025
-
-> *This project is for academic or personal portfolio use only.*
