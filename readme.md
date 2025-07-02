@@ -1,71 +1,71 @@
-Table of Contents
+WD-SEATWORK1
 
-- [Overview](#overview)  
-- [Key Components](#key-components)  
-- [Technology](#technology)  
-- [Rules, Practices and Principles](#rules-practices-and-principles)  
-- [Resources](#resources)  
+This project is a simple, well-structured HTML and CSS layout consisting of five uniquely styled section boxes. Each box represents a styled card or section containing a header, navigation menu, and footer. It was created as part of the **WD-SEATWORK1** activity for the **TC05** course.
 
----
+## 🧩 Features
 
-Overview
-
-This project showcases five distinct section styles (boxes) implemented within a single HTML page, each demonstrating different design themes and interactive elements. It is a web layout exercise named **TC05 Sections**, created as a seatwork assignment to practice CSS styling techniques and basic HTML structure.
-
-Guiding Questions:
-
-- **What is the project?**  
-  A single HTML page with multiple visually unique section styles that display header, navigation, info, and footer elements.
-
-- **What is the purpose?**  
-  To demonstrate mastery of CSS styling (including animations, gradients, flexbox, grid layouts, and hover effects) alongside semantic HTML structure, and to present information in an organized and visually appealing way.
-
-- **What are the key components?**  
-  Five styled boxes (sections) each with:  
-  - Header (with logo and name)  
-  - Information area  
-  - Navigation bar with links and inputs/selects/buttons  
-  - Footer with copyright notice
-
-- **What technology is used and how?**  
-  Pure **HTML** and **CSS** (no JavaScript). CSS features include animations, flexbox, grid layout, gradients, and hover effects to create dynamic and modern UI components.
+- ✅ Modular design with reusable structure
+- 🎨 Distinct visual styling for each box using CSS
+- 📱 Responsive layout basics with Flexbox
+- 🧭 Simple navigation bar included in each section
+- 🖼 Placeholder image and personal information display
 
 ---
 
-## Key Components
-
-- Single-page website with five styled sections (boxes), each with unique design and layout:  
-  - **Box 1: Neon theme** with pulsing border animation  
-  - **Box 2: Sunrise theme** using gradients and grid layout  
-  - **Box 3: Neon grid theme** with animated scanline effect  
-  - **Box 4: Cotton candy theme** with glitch text animation  
-  - **Box 5: Matrix theme** featuring digital rain effect animation  
-
-- Common structural elements for each box:  
-  - Logo and name header  
-  - Information paragraphs  
-  - Navbar with links and inputs/buttons/selects  
-  - Footer with rights reserved message
+## 📁 File Structure
+project-root/
+├── assets/
+│ └── img/
+│ └── logo.png # Logo image used in the header
+├── index.html # Main HTML file with all 5 section boxes
+└── README.md # This readme file
 
 ---
 
-## Technology
+## 📌 Sections Overview
 
-- **HTML5**: Semantic structure and content  
-- **CSS3**: Styling, layout, animations, transitions  
-  - Flexbox and CSS Grid for layout  
-  - Keyframe animations for effects (neon pulse, scanline, glitch, digital rain)  
-  - Gradients and box shadows for visual style
+Each section (`box1` to `box5`) follows a consistent structure:
+
+- **Header** – Displays a logo and name (Anthony Gabrielle Hermoso)
+- **Info** – Shows course and activity identifiers (TC05, WD-SEATWORK1)
+- **Navbar** – Simple navigation links with hover effects
+- **Footer** – "All Rights Reserved 2025" text
+
+Each box is styled differently using CSS classes:
+- `box1` – Basic with border
+- `box2` – Gradient background
+- `box3` – Light yellow with drop shadow
+- `box4` – Info-style background with accent border
+- `box5` – Alert-style with monospace font
 
 ---
 
-## Rules, Practices and Principles
+## 🛠 How to Use
 
-- Project titles should use the prefix `WD-` followed by a descriptive name for the subject.  
-- Filename for the main HTML page must always be `index.html`.  
-- Files must be organized into respective folders (assets, css, img, js).  
-- Naming conventions follow camelCase format (e.g., `buttonAnimatedStyle.css`).  
-- Use **only external CSS** files for styling.  
-- Folder names should be descriptive and related to their content or function.  
+1. **Clone or Download** the project files.
+2. Place your logo in `assets/img/logo.png`. Make sure the path matches.
+3. Open `index.html` in your browser.
+4. Customize the content or styles as needed.
 
-Example file structure:
+---
+
+## ✨ Customization Tips
+
+- To change colors or layout, modify the styles in the `<style>` tag inside `index.html`.
+- Replace the navigation link labels or URLs as per your site's needs.
+- Update personal or course information in the `.box-info` sections.
+
+---
+
+## 🧑‍💻 Author
+
+**Anthony Gabrielle Hermoso**  
+WD-SEATWORK1 — TC05 (Web Development)
+
+---
+
+## 📅 License
+
+All Rights Reserved © 2025
+
+> *This project is for academic or personal portfolio use only.*
