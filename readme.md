@@ -65,6 +65,7 @@ This project is a **Single Page Website** that displays multiple unique UI box d
 - ✅ Rename folders inside `pages/` clearly to match their purpose  
 - ✅ File Structure:
 
+```
 WD-SEATWORK1
 ├── assets
 │ ├── css
@@ -85,7 +86,7 @@ WD-SEATWORK1
 │ └── index.html
 ├── index.html
 └── readme.md
-
+```
 
 ---
 
