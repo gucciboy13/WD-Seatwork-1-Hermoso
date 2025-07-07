@@ -19,6 +19,10 @@
       box-sizing: border-box;
       color: #eee;
       padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 250px; /* Adjust as needed to give content space */
     }
 
     .box-header {
@@ -48,11 +52,24 @@
     }
 
     .box-footer {
-      text-align: center;
-      font-size: 14px;
-      color: #888;
-      font-style: italic;
-      margin-top: 20px;
+      margin-top: auto;
+      padding-top: 20px;
+    }
+
+    /* Common Footer Styles (for icons, etc.) */
+    .footer-section {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a, .footer-social a {
+      color: inherit;
+      text-decoration: none;
+      margin-right: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-social a {
+      font-size: 20px;
     }
 
     /* BOX 1: NEON */
@@ -61,10 +78,6 @@
       border: 2px solid #00ffff;
       box-shadow: 0 0 15px #00ffff;
       animation: neonPulse 2.5s infinite alternate;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
     }
 
@@ -101,53 +114,101 @@
       margin-left: auto;
     }
 
+    .box-footer.box1 {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      font-style: italic;
+      border-top: 1px solid rgba(0, 255, 255, 0.3);
+      padding-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .box-footer.box1 .footer-social a {
+        color: #00ffff;
+    }
+    .box-footer.box1 .footer-social a:hover {
+        color: #fff;
+    }
+
     /* BOX 2: SUNRISE  */
     .box2 {
-  background: linear-gradient(45deg, #ff0055, #ffcc00);
-  color: #222;
-  font-family: 'Courier New', monospace;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 20px;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  padding: 30px;
-}
+      background: linear-gradient(45deg, #ff0055, #ffcc00);
+      color: #222;
+      font-family: 'Courier New', monospace;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: flex-start;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+    }
 
-.box-navbar.box2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+    .box-navbar.box2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-.box-navbar.box2 a {
-  color: #222;
-  margin-right: 10px;
-  padding: 6px 10px;
-  background: rgba(255, 255, 255, 0.2);
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+    .box-navbar.box2 a {
+      color: #222;
+      margin-right: 10px;
+      padding: 6px 10px;
+      background: rgba(255, 255, 255, 0.2);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-.box-navbar.box2 a:hover {
-  background: #222;
-  color: #ffcc00;
-}
+    .box-navbar.box2 a:hover {
+      background: #222;
+      color: #ffcc00;
+    }
 
-.box-navbar.box2 select {
-  padding: 6px 8px;
-  font-family: 'Courier New';
-  background: #ffcc00;
-  color: #222;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-}
+    .box-navbar.box2 select {
+      padding: 6px 8px;
+      font-family: 'Courier New';
+      background: #ffcc00;
+      color: #222;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .box-footer.box2 {
+      text-align: right;
+      font-size: 15px;
+      color: #333;
+      font-weight: bold;
+      border-top: 1px dashed rgba(0, 0, 0, 0.2);
+      padding-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+    }
+
+    .box-footer.box2 .footer-links a {
+      color: #222;
+      margin-left: 10px;
+      transition: color 0.3s ease;
+    }
+    .box-footer.box2 .footer-links a:hover {
+      color: #ff0055;
+    }
+    .box-footer.box2 .footer-social a {
+      color: #ff0055;
+    }
+    .box-footer.box2 .footer-social a:hover {
+      color: #ffcc00;
+    }
+
 
     /* BOX 3: NEON GRID */
     .box3 {
@@ -155,8 +216,6 @@
       border: 2px solid #0ff;
       position: relative;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
     }
 
     .box3::before {
@@ -202,14 +261,59 @@
       border-radius: 4px;
     }
 
+    .box-footer.box3 {
+      text-align: left;
+      font-size: 13px;
+      color: #0ff;
+      padding-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-top: 1px solid rgba(0, 255, 255, 0.5);
+    }
+    .box-footer.box3 .footer-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .box-footer.box3 .footer-links a {
+        color: #0ff;
+    }
+    .box-footer.box3 .footer-links a:hover {
+        color: #fff;
+        text-shadow: 0 0 5px #0ff;
+    }
+    .box-footer.box3 .footer-social a {
+        color: #0ff;
+    }
+    .box-footer.box3 .footer-social a:hover {
+        color: #fff;
+        text-shadow: 0 0 5px #0ff;
+    }
+    .box-footer.box3 .newsletter input {
+        background: rgba(0, 255, 255, 0.1);
+        border: 1px solid #0ff;
+        padding: 5px;
+        color: #0ff;
+        border-radius: 3px;
+    }
+    .box-footer.box3 .newsletter button {
+        background: #0ff;
+        color: #000;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
     /* BOX 4: COTTON CANDY */
     .box4 {
       background: linear-gradient(135deg, #ff77ff, #77ffff);
       border-left: 10px solid #ff55ff;
       color: #222;
       font-family: 'Arial Black', sans-serif;
-      display: flex;
-      flex-direction: column;
       gap: 15px;
     }
 
@@ -246,6 +350,30 @@
       background: #fff;
       font-weight: bold;
     }
+
+    .box-footer.box4 {
+      text-align: center;
+      font-size: 14px;
+      color: #444;
+      font-style: italic;
+      border-top: 2px dotted #ffccff;
+      padding-top: 15px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .box-footer.box4 .footer-links a, .box-footer.box4 .footer-social a {
+        color: #ff00ff;
+        margin: 0 8px;
+    }
+    .box-footer.box4 .footer-links a:hover, .box-footer.box4 .footer-social a:hover {
+        color: #77ffff;
+    }
+    .box-footer.box4 .contact-info p {
+        margin: 0;
+        font-size: 13px;
+    }
+
 
     /* BOX 5: MATRIX */
     .box5 {
@@ -313,55 +441,131 @@
       cursor: pointer;
     }
 
+    .box-footer.box5 {
+      text-align: center;
+      font-size: 14px;
+      color: #00cc00;
+      padding-top: 15px;
+      border-top: 1px solid #00ff00;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .box-footer.box5 .footer-links, .box-footer.box5 .footer-info {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .box-footer.box5 .footer-links a, .box-footer.box5 .footer-info span {
+      color: #00ff00;
+      text-decoration: none;
+    }
+
+    .box-footer.box5 .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .box-footer.box5 .back-to-top {
+        display: block;
+        margin-top: 10px;
+        color: #00ff00;
+        text-decoration: none;
+        font-weight: bold;
+        border: 1px solid #00ff00;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box-footer.box5 .back-to-top:hover {
+        background: #00ff00;
+        color: #001400;
+    }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-<!-- BOX 1 -->
 <div class="TC05 box1">
-  <div class="box-header">
-    <img src="assets/img/logo.png" alt="Logo">
-    <div class="name">Anthony Gabrielle Hermoso</div>
-  </div>
-  <div class="box-info">
-    <p>TC05</p>
-    <p>WD-SEATWORK1</p>
-  </div>
-  <div class="box-navbar box1">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <input type="text" placeholder="Search...">
-  </div>
-  <div class="box-footer">© 2025 Anthony G. Hermoso | Privacy Policy | Terms of Use</div>
-</div>
-
-<!-- BOX 2 -->
-<div class="TC05 box2">
-  <div class="box-header">
-    <img src="assets/img/logo.png" alt="Logo">
-    <div class="name">Anthony Gabrielle Hermoso</div>
-  </div>
-  <div class="box-info">
-    <p>TC05</p>
-    <p>WD-SEATWORK1</p>
-  </div>
-  <div class="box-navbar box2">
-    <div>
-      <a href="#">Projects</a>
-      <a href="#">Services</a>
-      <a href="#">News</a>
+  <div>
+    <div class="box-header">
+      <img src="assets/img/logo.png" alt="Logo">
+      <div class="name">Anthony Gabrielle Hermoso</div>
     </div>
-    <select>
-      <option>More</option>
-      <option>Settings</option>
-      <option>Help Me</option>
-    </select>
+    <div class="box-info">
+      <p>TC05</p>
+      <p>WD-SEATWORK1</p>
+    </div>
+    <div class="box-navbar box1">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <input type="text" placeholder="Search...">
+    </div>
   </div>
-  <div class="box-footer">Stay connected: Twitter • Instagram • GitHub</div>
+  <div class="box-footer box1">
+    <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-section">
+        © 2025 Anthony G. Hermoso. All Rights Reserved.
+    </div>
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Sitemap</a>
+    </div>
+  </div>
 </div>
 
-<!-- BOX 3 -->
+<div class="TC05 box2">
+  <div>
+    <div class="box-header">
+      <img src="assets/img/logo.png" alt="Logo">
+      <div class="name">Anthony Gabrielle Hermoso</div>
+    </div>
+    <div class="box-info">
+      <p>TC05</p>
+      <p>WD-SEATWORK1</p>
+    </div>
+    <div class="box-navbar box2">
+      <div>
+        <a href="#">Projects</a>
+        <a href="#">Services</a>
+        <a href="#">News</a>
+      </div>
+      <select>
+        <option>More</option>
+        <option>Settings</option>
+        <option>Help Me</option>
+      </select>
+    </div>
+  </div>
+  <div class="box-footer box2">
+    <div class="footer-links">
+        <span>Quick Links:</span>
+        <a href="#">FAQ</a> •
+        <a href="#">Support</a> •
+        <a href="#">Careers</a>
+    </div>
+    <div class="footer-social">
+        <span>Connect with us:</span>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+    </div>
+    <div class="footer-section">
+        <p>Contact: gabrielle@hermoso.com | (123) 456-7890</p>
+        <p>© 2025 Creative Solutions. All rights reserved.</p>
+    </div>
+  </div>
+</div>
+
 <div class="TC05 box3">
   <div class="box-header">
     <img src="assets/img/logo.png" alt="Logo">
@@ -379,50 +583,108 @@
     </div>
     <div class="status">Status: Online</div>
   </div>
-  <div class="box-footer">System Status: Operational | Last updated: July 2, 2025</div>
-</div>
-
-<!-- BOX 4 -->
-<div class="TC05 box4">
-  <div class="box-header">
-    <img src="assets/img/logo.png" alt="Logo">
-    <div class="name">Anthony Gabrielle Hermoso</div>
-  </div>
-  <div class="box-info">
-    <p>TC05</p>
-    <p>WD-SEATWORK1</p>
-  </div>
-  <div class="box-navbar box4">
-    <div>
-      <a href="#">Portfolio</a>
-      <a href="#">Resume</a>
-      <a href="#">Contact</a>
+  <div class="box-footer box3">
+    <div class="footer-section">
+        <span>System Status: Operational</span>
+        <span>Last updated: July 2, 2025</span>
     </div>
-    <input type="search" placeholder="🔍 Search">
+    <div class="footer-section newsletter">
+        <input type="email" placeholder="Enter your email for updates">
+        <button>Subscribe</button>
+    </div>
+    <div class="footer-links">
+        <a href="#">System Docs</a> |
+        <a href="#">API Status</a> |
+        <a href="#">Security</a>
+    </div>
+    <div class="footer-social">
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+    </div>
+    <div class="footer-section">
+        &copy; 2025 TechGrid Inc.
+    </div>
   </div>
-  <div class="box-footer">Crafted by Anthony Gabrielle Hermoso | Contact: 201112443@fit.edu.ph</div>
 </div>
 
-<!-- BOX 5 -->
+<div class="TC05 box4">
+  <div>
+    <div class="box-header">
+      <img src="assets/img/logo.png" alt="Logo">
+      <div class="name">Anthony Gabrielle Hermoso</div>
+    </div>
+    <div class="box-info">
+      <p>TC05</p>
+      <p>WD-SEATWORK1</p>
+    </div>
+    <div class="box-navbar box4">
+      <div>
+        <a href="#">Portfolio</a>
+        <a href="#">Resume</a>
+        <a href="#">Contact</a>
+      </div>
+      <input type="search" placeholder="🔍 Search">
+    </div>
+  </div>
+  <div class="box-footer box4">
+    <div class="footer-links">
+        <a href="#">Client Login</a> |
+        <a href="#">Collaborate</a> |
+        <a href="#">Testimonials</a>
+    </div>
+    <div class="contact-info">
+        <p>Location: Quezon City, Metro Manila, Philippines</p>
+        <p>Email: 201112443@fit.edu.ph</p>
+    </div>
+    <div class="footer-social">
+        <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="footer-section">
+        Crafted by Anthony Gabrielle Hermoso.
+        <br>All visual content is protected.
+    </div>
+  </div>
+</div>
+
 <div class="TC05 box5">
   <div class="digital-rain">IT0043 IT0043 IT0043 IT0043 IT0043 IT0043</div>
-  <div class="box-header">
-    <img src="assets/img/logo.png" alt="Logo">
-    <div class="name">Anthony Gabrielle Hermoso</div>
-  </div>
-  <div class="box-info">
-    <p>TC05</p>
-    <p>WD-SEATWORK1</p>
-  </div>
-  <div class="box-navbar box5">
-    <div>
-      <a href="#">Blog</a>
-      <a href="#">Gallery</a>
-      <a href="#">FAQ</a>
+  <div>
+    <div class="box-header">
+      <img src="assets/img/logo.png" alt="Logo">
+      <div class="name">Anthony Gabrielle Hermoso</div>
     </div>
-    <button class="menu-btn">☰ MENU</button>
+    <div class="box-info">
+      <p>TC05</p>
+      <p>WD-SEATWORK1</p>
+    </div>
+    <div class="box-navbar box5">
+      <div>
+        <a href="#">Blog</a>
+        <a href="#">Gallery</a>
+        <a href="#">FAQ</a>
+      </div>
+      <button class="menu-btn">☰ MENU</button>
+    </div>
   </div>
-  <div class="box-footer">Access granted. All logs secured © 2025 | Admin Panel</div>
+  <div class="box-footer box5">
+    <div class="footer-info">
+        <span>Access granted.</span>
+        <span>All logs secured &copy; 2025</span>
+        <a href="#">Admin Panel</a>
+    </div>
+    <div class="footer-links">
+        <a href="#">System Info</a> |
+        <a href="#">Data Privacy</a> |
+        <a href="#">Legal Notice</a>
+    </div>
+    <div class="footer-social">
+        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="Reddit"><i class="fab fa-reddit"></i></a>
+    </div>
+    <a href="#top" class="back-to-top">Back to Top &uarr;</a>
+  </div>
 </div>
 
 </body>
