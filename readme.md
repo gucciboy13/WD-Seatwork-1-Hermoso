@@ -1,8 +1,17 @@
-## WD-SEATWORK1  
+<div align="center">
+  <a href="https://github.com/zyx-0314/">
+  <!-- TODO: If you want to add logo or banner you can add it here -->
+    <img src="./assets/img/logo.png" alt="Nyebe" width="130" height="100">
+  </a>
+<!-- TODO: Change Title to the name of the title of your Project -->
+  <h3 align="center">WD Seatwork 1</h3>
+</div>
+<!-- TODO: Make a short description -->
+<div align="center">
+  A collection of five uniquely styled section boxes, showcasing advanced CSS layout and animation techniques.  
+</div>
 
-A collection of five uniquely styled section boxes, showcasing advanced CSS layout and animation techniques.  
 
-![wakatime](https://wakatime.com/badge/user/example/project.svg)
 
 ---
 
